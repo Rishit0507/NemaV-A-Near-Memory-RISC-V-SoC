@@ -1,17 +1,23 @@
-# Genus EDA log files and run directories
+# Cadence Tool Logs & Artifacts
 genus.log*
 genus.cmd*
 fv/
 *.log
 *.cmd
+.*.tstamp
+*.tstamp
 
-# Ignore heavy ASAP7 PDK archives and extracted library binaries
-libs/asap7/**/LIB/
+# Cadence Xcelium Simulation Databases & History
+xcelium.d/
+sim/xcelium.d/
+sim/xrun.history
+*.history
+
+# PDK Libraries & Binary Archives
+libs/
+*.lib
 *.7z
 *.tar.xz
 *.tar.bz2
 7z2408-linux-x64*
 7zz
-
-# Optional: Keep outputs or ignore them if only tracking scripts/reports
-# synth/outputs/*
