@@ -1,0 +1,17 @@
+# Genus EDA log files and run directories
+genus.log*
+genus.cmd*
+fv/
+*.log
+*.cmd
+
+# Ignore heavy ASAP7 PDK archives and extracted library binaries
+libs/asap7/**/LIB/
+*.7z
+*.tar.xz
+*.tar.bz2
+7z2408-linux-x64*
+7zz
+
+# Optional: Keep outputs or ignore them if only tracking scripts/reports
+# synth/outputs/*
