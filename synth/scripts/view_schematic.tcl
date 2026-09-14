@@ -25,17 +25,6 @@ set_db syn_generic_effort high
 set_db syn_map_effort high
 set_db syn_opt_effort high
 
-syn_generic
-syn_map
-syn_opt
-syn_opt -incremental
-
-file mkdir ../reports/asap7
-file mkdir ../outputs/asap7
-
-report_timing > ../reports/asap7/nema_top_timing_${ARRAY_SIZE}.rpt
-report_area   > ../reports/asap7/nema_top_area_${ARRAY_SIZE}.rpt
-report_power  > ../reports/asap7/nema_top_power_${ARRAY_SIZE}.rpt
-
-write_hdl nema_top > ../outputs/asap7/nema_top_opt_${ARRAY_SIZE}_netlist.v
-write_sdc > ../outputs/asap7/nema_top_opt_${ARRAY_SIZE}.sdc
+read_hdl -netlist ../outputs/asap7/nema_top_opt_4x4_netlist.v
+elaborate nema_top
+gui_show
